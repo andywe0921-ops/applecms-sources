@@ -1,0 +1,161 @@
+{
+  "updated_at": "2026-11-16T10:40:00+08:00",
+  "description": "苹果CMS V10 可用采集接口列表（实测可用）。资源站经常变更，建议定期重测。仅供学习研究。",
+  "format": "MacCMS V10 JSON (api.php/provide/vod)",
+  "usage": {
+    "list": "?ac=list 或默认",
+    "detail": "?ac=detail&ids=ID",
+    "search": "?wd=关键词",
+    "recent": "?h=24",
+    "page": "&pg=1",
+    "optimize": "可在路径后加 /from/线路标识/ 只返回指定源"
+  },
+  "sources": [
+    {
+      "name": "量子资源",
+      "url": "https://cj.lziapi.com/api.php/provide/vod/",
+      "from": "lzm3u8",
+      "total_approx": 164051,
+      "status": "ok"
+    },
+    {
+      "name": "暴风资源",
+      "url": "https://bfzyapi.com/api.php/provide/vod/",
+      "from": "bfzym3u8",
+      "total_approx": 172465,
+      "status": "ok"
+    },
+    {
+      "name": "索尼资源",
+      "url": "https://suoniapi.com/api.php/provide/vod/",
+      "from": "snm3u8",
+      "total_approx": 149129,
+      "status": "ok"
+    },
+    {
+      "name": "巨量资源",
+      "url": "https://api.juliang.live/api/provide/vod",
+      "from": "jlm3u8",
+      "total_approx": 353235,
+      "status": "ok"
+    },
+    {
+      "name": "光速资源",
+      "url": "https://api.guangsuapi.com/api.php/provide/vod/",
+      "from": "gsm3u8",
+      "total_approx": 118446,
+      "status": "ok"
+    },
+    {
+      "name": "素博资源",
+      "url": "https://subocaiji.com/api.php/provide/vod/",
+      "from": null,
+      "total_approx": 118373,
+      "status": "ok"
+    },
+    {
+      "name": "金鹰资源",
+      "url": "http://jyzyapi.com/api.php/provide/vod/",
+      "from": "jinyingm3u8",
+      "total_approx": 118432,
+      "status": "ok"
+    },
+    {
+      "name": "红牛资源",
+      "url": "https://www.hongniuzy2.com/api.php/provide/vod/",
+      "from": "hnm3u8",
+      "total_approx": 117854,
+      "status": "ok"
+    },
+    {
+      "name": "豪华资源",
+      "url": "https://hhzyapi.com/api.php/provide/vod/",
+      "from": "hhm3u8",
+      "total_approx": 117539,
+      "status": "ok"
+    },
+    {
+      "name": "极速资源",
+      "url": "https://jszyapi.com/api.php/provide/vod/",
+      "from": "jsm3u8",
+      "total_approx": 116780,
+      "status": "ok"
+    },
+    {
+      "name": "闪电资源",
+      "url": "http://sdzyapi.com/api.php/provide/vod/",
+      "from": "sdm3u8",
+      "total_approx": 125726,
+      "status": "ok"
+    },
+    {
+      "name": "无尽资源",
+      "url": "https://api.wujinapi.com/api.php/provide/vod/",
+      "from": "wjm3u8",
+      "total_approx": 125193,
+      "status": "ok"
+    },
+    {
+      "name": "非凡资源",
+      "url": "https://cj.ffzyapi.com/api.php/provide/vod/",
+      "from": "ffm3u8",
+      "total_approx": 99153,
+      "status": "ok"
+    },
+    {
+      "name": "魔都资源",
+      "url": "https://caiji.moduapi.cc/api.php/provide/vod/",
+      "from": null,
+      "total_approx": 91837,
+      "status": "ok"
+    },
+    {
+      "name": "电影天堂资源",
+      "url": "https://caiji.dyttzyapi.com/api.php/provide/vod/",
+      "from": "dyttm3u8",
+      "total_approx": 85184,
+      "status": "ok"
+    },
+    {
+      "name": "360资源",
+      "url": "https://360zy.com/api.php/provide/vod/",
+      "from": null,
+      "total_approx": 75153,
+      "status": "ok"
+    },
+    {
+      "name": "天涯资源",
+      "url": "https://tyyszyapi.com/api.php/provide/vod/",
+      "from": "tym3u8",
+      "total_approx": 74726,
+      "status": "ok"
+    },
+    {
+      "name": "百度资源",
+      "url": "https://api.apibdzy.com/api.php/provide/vod/",
+      "from": "dbm3u8",
+      "total_approx": 49734,
+      "status": "ok"
+    }
+  ],
+  "xml_sources": [
+    {
+      "name": "1080资源(优质资源库)",
+      "url": "http://api.1080zyku.com/inc/api.php/provide/vod/",
+      "note": "返回XML格式，兼容老版苹果CMS/海洋CMS等",
+      "status": "ok"
+    }
+  ],
+  "failed_at_test": [
+    "https://caiji.kczyapi.com/api.php/provide/vod/ (快车资源 - 超时)",
+    "http://m3u8.tiankongapi.com/api.php/provide/vod/ (天空资源 - 返回HTML)",
+    "https://collect.wolongzyw.com/api.php/provide/vod/ (卧龙 - 域名出售页)"
+  ],
+  "notes": [
+    "测试时间: 2026-11-16 约10:40 CST",
+    "total_approx 为接口返回的大致资源总量，仅供参考",
+    "建议在苹果CMS后台「采集 → 自定义接口」中添加，接口类型选 json（1080选 xml）",
+    "部分站支持 /from/线路名/ 优化，例如量子: .../vod/from/lzm3u8/",
+    "资源站随时可能变更，请定期重新测试"
+  ]
+}
