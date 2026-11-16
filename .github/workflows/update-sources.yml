@@ -1,0 +1,38 @@
+name: Auto Update AppleCMS Sources
+
+on:
+  schedule:
+    # 每 6 小时自动执行一次（UTC 时间）
+    - cron: '0 */6 * * *'
+  workflow_dispatch:  # 允许你手动点击运行
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write   # 允许脚本提交更新后的文件
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Run update script
+        run: |
+          python update_applecms_sources.py
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add applecms_sources.json
+          if git diff --staged --quiet; then
+            echo "没有变化，跳过提交"
+          else
+            git commit -m "chore: auto update sources $(date -u +'%Y-%m-%d %H:%M UTC')"
+            git push
+          fi
