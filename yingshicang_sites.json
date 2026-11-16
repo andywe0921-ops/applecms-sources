@@ -1,211 +1,532 @@
+# 影视仓配置 - 23站点 + 3直播源（格式对齐精简版）
+# 2026-11
 {
-  "sites": [
+ "spider": "https://gh-proxy.com/https://raw.githubusercontent.com/YuanHsing/freed/master/TVBox/MaooXB2/XBiubiuLA4.jar",
+ "lives": [
+  {
+   "name": "央视卫视(zbds)",
+   "type": 0,
+   "url": "https://gh-proxy.com/https://raw.githubusercontent.com/andywe0921-ops/iptvzbds2/main/%E7%9B%B4%E6%92%AD%E6%BA%901_zbds%E5%A4%AE%E8%A7%86%E5%8D%AB%E8%A7%86.m3u"
+  },
+  {
+   "name": "直播大全(suxuang)",
+   "type": 0,
+   "url": "https://gh-proxy.com/https://raw.githubusercontent.com/andywe0921-ops/iptvsuxuang/main/%E7%9B%B4%E6%92%AD%E6%BA%902_suxuang%E5%A4%A7%E5%85%A8.m3u"
+  },
+  {
+   "name": "自动更新(guovin)",
+   "type": 0,
+   "url": "https://gh-proxy.com/https://raw.githubusercontent.com/andywe0921-ops/iptvauto/main/%E7%9B%B4%E6%92%AD%E6%BA%903_guovin%E8%87%AA%E5%8A%A8.m3u"
+  }
+ ],
+ "sites": [
+  {
+   "key": "juliang",
+   "name": "巨量资源",
+   "type": 1,
+   "api": "https://api.juliang.live/api/provide/vod",
+   "searchable": 1,
+   "quickSearch": 1
+  },
+  {
+   "key": "baofeng",
+   "name": "暴风资源",
+   "type": 1,
+   "api": "https://bfzyapi.com/api.php/provide/vod/",
+   "searchable": 1,
+   "quickSearch": 1
+  },
+  {
+   "key": "liangzi",
+   "name": "量子资源",
+   "type": 1,
+   "api": "https://cj.lziapi.com/api.php/provide/vod/",
+   "searchable": 1,
+   "quickSearch": 1
+  },
+  {
+   "key": "suoni",
+   "name": "索尼资源",
+   "type": 1,
+   "api": "https://suoniapi.com/api.php/provide/vod/",
+   "searchable": 1,
+   "quickSearch": 1
+  },
+  {
+   "key": "shandian",
+   "name": "闪电资源",
+   "type": 1,
+   "api": "http://sdzyapi.com/api.php/provide/vod/",
+   "searchable": 1,
+   "quickSearch": 1
+  },
+  {
+   "key": "wujin",
+   "name": "无尽资源",
+   "type": 1,
+   "api": "https://api.wujinapi.com/api.php/provide/vod/",
+   "searchable": 1,
+   "quickSearch": 1
+  },
+  {
+   "key": "guangsu",
+   "name": "光速资源",
+   "type": 1,
+   "api": "https://api.guangsuapi.com/api.php/provide/vod/",
+   "searchable": 1,
+   "quickSearch": 1
+  },
+  {
+   "key": "jinying",
+   "name": "金鹰资源",
+   "type": 1,
+   "api": "http://jyzyapi.com/api.php/provide/vod/",
+   "searchable": 1,
+   "quickSearch": 1
+  },
+  {
+   "key": "subo",
+   "name": "素博资源",
+   "type": 1,
+   "api": "https://subocaiji.com/api.php/provide/vod/",
+   "searchable": 1,
+   "quickSearch": 1
+  },
+  {
+   "key": "hongniu",
+   "name": "红牛资源",
+   "type": 1,
+   "api": "https://www.hongniuzy2.com/api.php/provide/vod/",
+   "searchable": 1,
+   "quickSearch": 1
+  },
+  {
+   "key": "haohua",
+   "name": "豪华资源",
+   "type": 1,
+   "api": "https://hhzyapi.com/api.php/provide/vod/",
+   "searchable": 1,
+   "quickSearch": 1
+  },
+  {
+   "key": "huya",
+   "name": "虎牙资源",
+   "type": 1,
+   "api": "https://www.huyaapi.com/api.php/provide/vod/",
+   "searchable": 1,
+   "quickSearch": 1
+  },
+  {
+   "key": "jisu",
+   "name": "极速资源",
+   "type": 1,
+   "api": "https://jszyapi.com/api.php/provide/vod/",
+   "searchable": 1,
+   "quickSearch": 1
+  },
+  {
+   "key": "youzhi",
+   "name": "优质资源",
+   "type": 1,
+   "api": "https://api.yzzy-api.com/inc/apijson.php",
+   "searchable": 1,
+   "quickSearch": 1
+  },
+  {
+   "key": "feifan",
+   "name": "非凡资源",
+   "type": 1,
+   "api": "https://cj.ffzyapi.com/api.php/provide/vod/",
+   "searchable": 1,
+   "quickSearch": 1
+  },
+  {
+   "key": "modu",
+   "name": "魔都资源",
+   "type": 1,
+   "api": "https://caiji.moduapi.cc/api.php/provide/vod/",
+   "searchable": 1,
+   "quickSearch": 1
+  },
+  {
+   "key": "ruyi",
+   "name": "如意资源",
+   "type": 1,
+   "api": "https://cj.rycjapi.com/api.php/provide/vod/",
+   "searchable": 1,
+   "quickSearch": 1
+  },
+  {
+   "key": "dytt",
+   "name": "电影天堂资源",
+   "type": 1,
+   "api": "https://caiji.dyttzyapi.com/api.php/provide/vod/",
+   "searchable": 1,
+   "quickSearch": 1
+  },
+  {
+   "key": "zy360",
+   "name": "360资源",
+   "type": 1,
+   "api": "https://360zy.com/api.php/provide/vod/",
+   "searchable": 1,
+   "quickSearch": 1
+  },
+  {
+   "key": "tianya",
+   "name": "天涯资源",
+   "type": 1,
+   "api": "https://tyyszyapi.com/api.php/provide/vod/",
+   "searchable": 1,
+   "quickSearch": 1
+  },
+  {
+   "key": "iqiyi",
+   "name": "爱奇艺资源",
+   "type": 1,
+   "api": "https://iqiyizyapi.com/api.php/provide/vod/",
+   "searchable": 1,
+   "quickSearch": 1
+  },
+  {
+   "key": "uku",
+   "name": "U酷资源",
+   "type": 1,
+   "api": "https://api.ukuapi.com/api.php/provide/vod/",
+   "searchable": 1,
+   "quickSearch": 1
+  },
+  {
+   "key": "baidu",
+   "name": "百度资源",
+   "type": 1,
+   "api": "https://api.apibdzy.com/api.php/provide/vod/",
+   "searchable": 1,
+   "quickSearch": 1
+  }
+ ],
+ "parses": [
+  {
+   "name": "解析聚合",
+   "type": 3,
+   "url": "Demo"
+  },
+  {
+   "name": "Json并发",
+   "type": 2,
+   "url": "Parallel"
+  },
+  {
+   "name": "Json轮询",
+   "type": 2,
+   "url": "Sequence"
+  },
+  {
+   "name": "Web解析",
+   "type": 0,
+   "url": "https://jx.xmflv.com/?url=",
+   "ext": {
+    "flag": [
+     "qq",
+     "qiyi",
+     "mgtv",
+     "youku",
+     "letv",
+     "sohu",
+     "xigua",
+     "bilibili"
+    ]
+   }
+  },
+  {
+   "name": "虾米解析",
+   "type": 0,
+   "url": "https://jx.xmflv.cc/?url=",
+   "ext": {
+    "flag": [
+     "qq",
+     "qiyi",
+     "mgtv",
+     "youku",
+     "letv",
+     "sohu"
+    ]
+   }
+  },
+  {
+   "name": "M3U8.TV",
+   "type": 1,
+   "url": "https://api.m3u8.tv:5678/home/api?type=ys&uid=1931000&key=gktuvyzABEORSYZ135&url="
+  },
+  {
+   "name": "NX解析",
+   "type": 1,
+   "url": "https://vip.nxflv.com/home/api?uid=701203&key=bltuyCEFKLTX013679&url="
+  },
+  {
+   "name": "盘古解析",
+   "type": 1,
+   "url": "https://json.pangujiexi.com:12345/json.php?url=",
+   "ext": {
+    "flag": [
+     "qq",
+     "qiyi",
+     "youku",
+     "mgtv"
+    ]
+   }
+  },
+  {
+   "name": "BoZRC",
+   "type": 1,
+   "url": "https://jx.bozrc.com:4433/player/?url=",
+   "ext": {
+    "flag": [
+     "qiyi",
+     "qq",
+     "letv",
+     "sohu",
+     "youku",
+     "mgtv",
+     "bilibili"
+    ]
+   }
+  }
+ ],
+ "flags": [
+  "youku",
+  "qq",
+  "iqiyi",
+  "qiyi",
+  "letv",
+  "sohu",
+  "tudou",
+  "pptv",
+  "mgtv",
+  "wasu",
+  "bilibili",
+  "renrenmi",
+  "xigua"
+ ],
+ "ijk": [
+  {
+   "group": "软解码",
+   "options": [
     {
-      "key": "juliang",
-      "name": "巨量资源",
-      "type": 1,
-      "api": "https://api.juliang.live/api/provide/vod",
-      "searchable": 1,
-      "quickSearch": 1,
-      "filterable": 1
+     "category": 4,
+     "name": "opensles",
+     "value": "0"
     },
     {
-      "key": "baofeng",
-      "name": "暴风资源",
-      "type": 1,
-      "api": "https://bfzyapi.com/api.php/provide/vod/",
-      "searchable": 1,
-      "quickSearch": 1,
-      "filterable": 1
+     "category": 4,
+     "name": "overlay-format",
+     "value": "842225234"
     },
     {
-      "key": "liangzi",
-      "name": "量子资源",
-      "type": 1,
-      "api": "https://cj.lziapi.com/api.php/provide/vod/",
-      "searchable": 1,
-      "quickSearch": 1,
-      "filterable": 1
+     "category": 4,
+     "name": "framedrop",
+     "value": "1"
     },
     {
-      "key": "suoni",
-      "name": "索尼资源",
-      "type": 1,
-      "api": "https://suoniapi.com/api.php/provide/vod/",
-      "searchable": 1,
-      "quickSearch": 1,
-      "filterable": 1
+     "category": 4,
+     "name": "soundtouch",
+     "value": "1"
     },
     {
-      "key": "shandian",
-      "name": "闪电资源",
-      "type": 1,
-      "api": "http://sdzyapi.com/api.php/provide/vod/",
-      "searchable": 1,
-      "quickSearch": 1,
-      "filterable": 1
+     "category": 4,
+     "name": "start-on-prepared",
+     "value": "1"
     },
     {
-      "key": "wujin",
-      "name": "无尽资源",
-      "type": 1,
-      "api": "https://api.wujinapi.com/api.php/provide/vod/",
-      "searchable": 1,
-      "quickSearch": 1,
-      "filterable": 1
+     "category": 1,
+     "name": "http-detect-range-support",
+     "value": "0"
     },
     {
-      "key": "guangsu",
-      "name": "光速资源",
-      "type": 1,
-      "api": "https://api.guangsuapi.com/api.php/provide/vod/",
-      "searchable": 1,
-      "quickSearch": 1,
-      "filterable": 1
+     "category": 1,
+     "name": "fflags",
+     "value": "fastseek"
     },
     {
-      "key": "jinying",
-      "name": "金鹰资源",
-      "type": 1,
-      "api": "http://jyzyapi.com/api.php/provide/vod/",
-      "searchable": 1,
-      "quickSearch": 1,
-      "filterable": 1
+     "category": 2,
+     "name": "skip_loop_filter",
+     "value": "48"
     },
     {
-      "key": "subo",
-      "name": "素博资源",
-      "type": 1,
-      "api": "https://subocaiji.com/api.php/provide/vod/",
-      "searchable": 1,
-      "quickSearch": 1,
-      "filterable": 1
+     "category": 4,
+     "name": "reconnect",
+     "value": "1"
     },
     {
-      "key": "hongniu",
-      "name": "红牛资源",
-      "type": 1,
-      "api": "https://www.hongniuzy2.com/api.php/provide/vod/",
-      "searchable": 1,
-      "quickSearch": 1,
-      "filterable": 1
+     "category": 4,
+     "name": "enable-accurate-seek",
+     "value": "0"
     },
     {
-      "key": "haohua",
-      "name": "豪华资源",
-      "type": 1,
-      "api": "https://hhzyapi.com/api.php/provide/vod/",
-      "searchable": 1,
-      "quickSearch": 1,
-      "filterable": 1
+     "category": 4,
+     "name": "mediacodec",
+     "value": "0"
     },
     {
-      "key": "huya",
-      "name": "虎牙资源",
-      "type": 1,
-      "api": "https://www.huyaapi.com/api.php/provide/vod/",
-      "searchable": 1,
-      "quickSearch": 1,
-      "filterable": 1
+     "category": 4,
+     "name": "mediacodec-auto-rotate",
+     "value": "0"
     },
     {
-      "key": "jisu",
-      "name": "极速资源",
-      "type": 1,
-      "api": "https://jszyapi.com/api.php/provide/vod/",
-      "searchable": 1,
-      "quickSearch": 1,
-      "filterable": 1
+     "category": 4,
+     "name": "mediacodec-handle-resolution-change",
+     "value": "0"
     },
     {
-      "key": "youzhi",
-      "name": "优质资源",
-      "type": 1,
-      "api": "https://api.yzzy-api.com/inc/apijson.php",
-      "searchable": 1,
-      "quickSearch": 1,
-      "filterable": 1
+     "category": 4,
+     "name": "mediacodec-hevc",
+     "value": "0"
     },
     {
-      "key": "feifan",
-      "name": "非凡资源",
-      "type": 1,
-      "api": "https://cj.ffzyapi.com/api.php/provide/vod/",
-      "searchable": 1,
-      "quickSearch": 1,
-      "filterable": 1
-    },
-    {
-      "key": "modu",
-      "name": "魔都资源",
-      "type": 1,
-      "api": "https://caiji.moduapi.cc/api.php/provide/vod/",
-      "searchable": 1,
-      "quickSearch": 1,
-      "filterable": 1
-    },
-    {
-      "key": "ruyi",
-      "name": "如意资源",
-      "type": 1,
-      "api": "https://cj.rycjapi.com/api.php/provide/vod/",
-      "searchable": 1,
-      "quickSearch": 1,
-      "filterable": 1
-    },
-    {
-      "key": "dytt",
-      "name": "电影天堂资源",
-      "type": 1,
-      "api": "https://caiji.dyttzyapi.com/api.php/provide/vod/",
-      "searchable": 1,
-      "quickSearch": 1,
-      "filterable": 1
-    },
-    {
-      "key": "zy360",
-      "name": "360资源",
-      "type": 1,
-      "api": "https://360zy.com/api.php/provide/vod/",
-      "searchable": 1,
-      "quickSearch": 1,
-      "filterable": 1
-    },
-    {
-      "key": "tianya",
-      "name": "天涯资源",
-      "type": 1,
-      "api": "https://tyyszyapi.com/api.php/provide/vod/",
-      "searchable": 1,
-      "quickSearch": 1,
-      "filterable": 1
-    },
-    {
-      "key": "iqiyi",
-      "name": "爱奇艺资源",
-      "type": 1,
-      "api": "https://iqiyizyapi.com/api.php/provide/vod/",
-      "searchable": 1,
-      "quickSearch": 1,
-      "filterable": 1
-    },
-    {
-      "key": "uku",
-      "name": "U酷资源",
-      "type": 1,
-      "api": "https://api.ukuapi.com/api.php/provide/vod/",
-      "searchable": 1,
-      "quickSearch": 1,
-      "filterable": 1
-    },
-    {
-      "key": "baidu",
-      "name": "百度资源",
-      "type": 1,
-      "api": "https://api.apibdzy.com/api.php/provide/vod/",
-      "searchable": 1,
-      "quickSearch": 1,
-      "filterable": 1
+     "category": 1,
+     "name": "dns_cache_timeout",
+     "value": "600000000"
     }
-  ]
+   ]
+  },
+  {
+   "group": "硬解码",
+   "options": [
+    {
+     "category": 4,
+     "name": "opensles",
+     "value": "0"
+    },
+    {
+     "category": 4,
+     "name": "overlay-format",
+     "value": "842225234"
+    },
+    {
+     "category": 4,
+     "name": "framedrop",
+     "value": "1"
+    },
+    {
+     "category": 4,
+     "name": "soundtouch",
+     "value": "1"
+    },
+    {
+     "category": 4,
+     "name": "start-on-prepared",
+     "value": "1"
+    },
+    {
+     "category": 1,
+     "name": "http-detect-range-support",
+     "value": "0"
+    },
+    {
+     "category": 1,
+     "name": "fflags",
+     "value": "fastseek"
+    },
+    {
+     "category": 2,
+     "name": "skip_loop_filter",
+     "value": "48"
+    },
+    {
+     "category": 4,
+     "name": "reconnect",
+     "value": "1"
+    },
+    {
+     "category": 4,
+     "name": "enable-accurate-seek",
+     "value": "0"
+    },
+    {
+     "category": 4,
+     "name": "mediacodec",
+     "value": "1"
+    },
+    {
+     "category": 4,
+     "name": "mediacodec-auto-rotate",
+     "value": "1"
+    },
+    {
+     "category": 4,
+     "name": "mediacodec-handle-resolution-change",
+     "value": "1"
+    },
+    {
+     "category": 4,
+     "name": "mediacodec-hevc",
+     "value": "1"
+    },
+    {
+     "category": 1,
+     "name": "dns_cache_timeout",
+     "value": "600000000"
+    }
+   ]
+  }
+ ],
+ "ads": [
+  "mimg.0c1q0l.cn",
+  "www.googletagmanager.com",
+  "www.google-analytics.com",
+  "mc.usihnbcq.cn",
+  "mg.g1mm3d.cn",
+  "mscs.svaeuzh.cn",
+  "cnzz.hhttm.top",
+  "tp.vinuxhome.com",
+  "cnzz.mmstat.com",
+  "www.baihuillq.com",
+  "s23.cnzz.com",
+  "z3.cnzz.com",
+  "c.cnzz.com",
+  "stj.v1vo.top",
+  "z12.cnzz.com",
+  "img.mosflower.cn",
+  "tips.gamevvip.com",
+  "ehwe.yhdtns.com",
+  "xdn.cqqc3.com",
+  "www.jixunkyy.cn",
+  "sp.chemacid.cn",
+  "hm.baidu.com",
+  "s9.cnzz.com",
+  "z6.cnzz.com",
+  "um.cavuc.com",
+  "mav.mavuz.com",
+  "wofwk.aoidf3.com",
+  "z5.cnzz.com",
+  "xc.hubeijieshikj.cn",
+  "tj.tianwenhu.com",
+  "xg.gars57.cn",
+  "k.jinxiuzhilv.com",
+  "cdn.bootcss.com",
+  "ppl.xunzhuo123.com",
+  "xomk.jiangjunmh.top",
+  "img.xunzhuo123.com",
+  "z1.cnzz.com",
+  "s13.cnzz.com",
+  "xg.huataisangao.cn",
+  "z7.cnzz.com",
+  "xg.huataisangao.cn",
+  "z2.cnzz.com",
+  "s96.cnzz.com",
+  "q11.cnzz.com",
+  "thy.dacedsfa.cn",
+  "xg.whsbpw.cn",
+  "s19.cnzz.com",
+  "z8.cnzz.com",
+  "s4.cnzz.com",
+  "f5w.as12df.top",
+  "ae01.alicdn.com",
+  "www.92424.cn",
+  "k.wudejia.com",
+  "vivovip.mmszxc.top",
+  "qiu.xixiqiu.com",
+  "cdnjs.hnfenxun.com",
+  "cms.qdwght.com"
+ ]
 }
