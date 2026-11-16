@@ -130,7 +130,7 @@ def main():
 
     # 2. 生成影视仓格式（完整骨架，可直接导入影视仓，spider 留空避免 jar 加载失败）
     SKELETON = {
-     "spider": "",
+     "spider": "https://gh-proxy.com/https://raw.githubusercontent.com/YuanHsing/freed/master/TVBox/MaooXB2/XBiubiuLA4.jar",
      "lives": [
       {
        "name": "央视卫视(zbds)",
