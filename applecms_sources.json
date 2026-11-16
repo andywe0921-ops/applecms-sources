@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-16T13:07:55+08:00",
+  "updated_at": "2026-11-16T13:30:39+08:00",
   "description": "苹果CMS V10 可用采集接口列表（实测可用）。资源站经常变更，建议定期重测。仅供学习研究。",
   "format": "MacCMS V10 JSON (api.php/provide/vod)",
   "usage": {
@@ -15,7 +15,7 @@
       "name": "巨量资源",
       "url": "https://api.juliang.live/api/provide/vod",
       "from": "jlm3u8",
-      "total_approx": 353251,
+      "total_approx": 353282,
       "status": "ok"
     },
     {
@@ -57,49 +57,49 @@
       "name": "光速资源",
       "url": "https://api.guangsuapi.com/api.php/provide/vod/",
       "from": "gsm3u8",
-      "total_approx": 118476,
+      "total_approx": 118483,
       "status": "ok"
     },
     {
       "name": "金鹰资源",
       "url": "http://jyzyapi.com/api.php/provide/vod/",
       "from": "jinyingm3u8",
-      "total_approx": 118464,
+      "total_approx": 118469,
       "status": "ok"
     },
     {
       "name": "素博资源",
       "url": "https://subocaiji.com/api.php/provide/vod/",
       "from": null,
-      "total_approx": 118405,
+      "total_approx": 118410,
       "status": "ok"
     },
     {
       "name": "红牛资源",
       "url": "https://www.hongniuzy2.com/api.php/provide/vod/",
       "from": "hnm3u8",
-      "total_approx": 117884,
+      "total_approx": 117891,
       "status": "ok"
     },
     {
       "name": "豪华资源",
       "url": "https://hhzyapi.com/api.php/provide/vod/",
       "from": "hhm3u8",
-      "total_approx": 117571,
+      "total_approx": 117576,
       "status": "ok"
     },
     {
       "name": "虎牙资源",
       "url": "https://www.huyaapi.com/api.php/provide/vod/",
       "from": null,
-      "total_approx": 117399,
+      "total_approx": 117406,
       "status": "ok"
     },
     {
       "name": "极速资源",
       "url": "https://jszyapi.com/api.php/provide/vod/",
       "from": "jsm3u8",
-      "total_approx": 116812,
+      "total_approx": 116817,
       "status": "ok"
     },
     {
@@ -120,7 +120,7 @@
       "name": "魔都资源",
       "url": "https://caiji.moduapi.cc/api.php/provide/vod/",
       "from": null,
-      "total_approx": 91883,
+      "total_approx": 91884,
       "status": "ok"
     },
     {
@@ -141,14 +141,14 @@
       "name": "360资源",
       "url": "https://360zy.com/api.php/provide/vod/",
       "from": null,
-      "total_approx": 75163,
+      "total_approx": 75184,
       "status": "ok"
     },
     {
       "name": "天涯资源",
       "url": "https://tyyszyapi.com/api.php/provide/vod/",
       "from": "tym3u8",
-      "total_approx": 74782,
+      "total_approx": 74796,
       "status": "ok"
     },
     {
@@ -183,7 +183,7 @@
   ],
   "failed_at_test": [],
   "notes": [
-    "测试时间: 2026-11-16T13:07:55+08:00",
+    "测试时间: 2026-11-16T13:30:39+08:00",
     "total_approx 为接口返回的大致资源总量，仅供参考",
     "建议在苹果CMS后台「采集 → 自定义接口」中添加，接口类型选 json（XML源选 xml）",
     "部分站支持 /from/线路名/ 优化，例如量子: .../vod/from/lzm3u8/",
