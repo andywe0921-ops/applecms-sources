@@ -19,7 +19,7 @@ ctx.check_hostname = False
 ctx.verify_mode = ssl.CERT_NONE
 
 INPUT_JSON = "applecms_sources.json"
-TIMEOUT = 8
+TIMEOUT = 15
 HEADERS = {"User-Agent": "Mozilla/5.0 (compatible; AppleCMS-Checker/1.1)"}
 
 def test_url(name, url):
@@ -128,8 +128,353 @@ def main():
         json.dump(data, f, ensure_ascii=False, indent=2)
     print("\n已更新 applecms_sources.json")
 
-    # 2. 生成影视仓格式
-    yingshi = {"sites": []}
+    # 2. 生成影视仓格式（完整骨架，可直接导入影视仓，spider 留空避免 jar 加载失败）
+    SKELETON = {
+     "spider": "",
+     "lives": [
+      {
+       "name": "央视卫视(zbds)",
+       "type": 0,
+       "url": "https://gh-proxy.com/https://raw.githubusercontent.com/andywe0921-ops/iptvzbds2/main/%E7%9B%B4%E6%92%AD%E6%BA%901_zbds%E5%A4%AE%E8%A7%86%E5%8D%AB%E8%A7%86.m3u"
+      },
+      {
+       "name": "直播大全(suxuang)",
+       "type": 0,
+       "url": "https://gh-proxy.com/https://raw.githubusercontent.com/andywe0921-ops/iptvsuxuang/main/%E7%9B%B4%E6%92%AD%E6%BA%902_suxuang%E5%A4%A7%E5%85%A8.m3u"
+      },
+      {
+       "name": "自动更新(guovin)",
+       "type": 0,
+       "url": "https://gh-proxy.com/https://raw.githubusercontent.com/andywe0921-ops/iptvauto/main/%E7%9B%B4%E6%92%AD%E6%BA%903_guovin%E8%87%AA%E5%8A%A8.m3u"
+      }
+     ],
+     "parses": [
+      {
+       "name": "解析聚合",
+       "type": 3,
+       "url": "Demo"
+      },
+      {
+       "name": "Json并发",
+       "type": 2,
+       "url": "Parallel"
+      },
+      {
+       "name": "Json轮询",
+       "type": 2,
+       "url": "Sequence"
+      },
+      {
+       "name": "Web解析",
+       "type": 0,
+       "url": "https://jx.xmflv.com/?url=",
+       "ext": {
+        "flag": [
+         "qq",
+         "qiyi",
+         "mgtv",
+         "youku",
+         "letv",
+         "sohu",
+         "xigua",
+         "bilibili"
+        ]
+       }
+      },
+      {
+       "name": "虾米解析",
+       "type": 0,
+       "url": "https://jx.xmflv.cc/?url=",
+       "ext": {
+        "flag": [
+         "qq",
+         "qiyi",
+         "mgtv",
+         "youku",
+         "letv",
+         "sohu"
+        ]
+       }
+      },
+      {
+       "name": "M3U8.TV",
+       "type": 1,
+       "url": "https://api.m3u8.tv:5678/home/api?type=ys&uid=1931000&key=gktuvyzABEORSYZ135&url="
+      },
+      {
+       "name": "NX解析",
+       "type": 1,
+       "url": "https://vip.nxflv.com/home/api?uid=701203&key=bltuyCEFKLTX013679&url="
+      },
+      {
+       "name": "盘古解析",
+       "type": 1,
+       "url": "https://json.pangujiexi.com:12345/json.php?url=",
+       "ext": {
+        "flag": [
+         "qq",
+         "qiyi",
+         "youku",
+         "mgtv"
+        ]
+       }
+      },
+      {
+       "name": "BoZRC",
+       "type": 1,
+       "url": "https://jx.bozrc.com:4433/player/?url=",
+       "ext": {
+        "flag": [
+         "qiyi",
+         "qq",
+         "letv",
+         "sohu",
+         "youku",
+         "mgtv",
+         "bilibili"
+        ]
+       }
+      }
+     ],
+     "flags": [
+      "youku",
+      "qq",
+      "iqiyi",
+      "qiyi",
+      "letv",
+      "sohu",
+      "tudou",
+      "pptv",
+      "mgtv",
+      "wasu",
+      "bilibili",
+      "renrenmi",
+      "xigua"
+     ],
+     "ijk": [
+      {
+       "group": "软解码",
+       "options": [
+        {
+         "category": 4,
+         "name": "opensles",
+         "value": "0"
+        },
+        {
+         "category": 4,
+         "name": "overlay-format",
+         "value": "842225234"
+        },
+        {
+         "category": 4,
+         "name": "framedrop",
+         "value": "1"
+        },
+        {
+         "category": 4,
+         "name": "soundtouch",
+         "value": "1"
+        },
+        {
+         "category": 4,
+         "name": "start-on-prepared",
+         "value": "1"
+        },
+        {
+         "category": 1,
+         "name": "http-detect-range-support",
+         "value": "0"
+        },
+        {
+         "category": 1,
+         "name": "fflags",
+         "value": "fastseek"
+        },
+        {
+         "category": 2,
+         "name": "skip_loop_filter",
+         "value": "48"
+        },
+        {
+         "category": 4,
+         "name": "reconnect",
+         "value": "1"
+        },
+        {
+         "category": 4,
+         "name": "enable-accurate-seek",
+         "value": "0"
+        },
+        {
+         "category": 4,
+         "name": "mediacodec",
+         "value": "0"
+        },
+        {
+         "category": 4,
+         "name": "mediacodec-auto-rotate",
+         "value": "0"
+        },
+        {
+         "category": 4,
+         "name": "mediacodec-handle-resolution-change",
+         "value": "0"
+        },
+        {
+         "category": 4,
+         "name": "mediacodec-hevc",
+         "value": "0"
+        },
+        {
+         "category": 1,
+         "name": "dns_cache_timeout",
+         "value": "600000000"
+        }
+       ]
+      },
+      {
+       "group": "硬解码",
+       "options": [
+        {
+         "category": 4,
+         "name": "opensles",
+         "value": "0"
+        },
+        {
+         "category": 4,
+         "name": "overlay-format",
+         "value": "842225234"
+        },
+        {
+         "category": 4,
+         "name": "framedrop",
+         "value": "1"
+        },
+        {
+         "category": 4,
+         "name": "soundtouch",
+         "value": "1"
+        },
+        {
+         "category": 4,
+         "name": "start-on-prepared",
+         "value": "1"
+        },
+        {
+         "category": 1,
+         "name": "http-detect-range-support",
+         "value": "0"
+        },
+        {
+         "category": 1,
+         "name": "fflags",
+         "value": "fastseek"
+        },
+        {
+         "category": 2,
+         "name": "skip_loop_filter",
+         "value": "48"
+        },
+        {
+         "category": 4,
+         "name": "reconnect",
+         "value": "1"
+        },
+        {
+         "category": 4,
+         "name": "enable-accurate-seek",
+         "value": "0"
+        },
+        {
+         "category": 4,
+         "name": "mediacodec",
+         "value": "1"
+        },
+        {
+         "category": 4,
+         "name": "mediacodec-auto-rotate",
+         "value": "1"
+        },
+        {
+         "category": 4,
+         "name": "mediacodec-handle-resolution-change",
+         "value": "1"
+        },
+        {
+         "category": 4,
+         "name": "mediacodec-hevc",
+         "value": "1"
+        },
+        {
+         "category": 1,
+         "name": "dns_cache_timeout",
+         "value": "600000000"
+        }
+       ]
+      }
+     ],
+     "ads": [
+      "mimg.0c1q0l.cn",
+      "www.googletagmanager.com",
+      "www.google-analytics.com",
+      "mc.usihnbcq.cn",
+      "mg.g1mm3d.cn",
+      "mscs.svaeuzh.cn",
+      "cnzz.hhttm.top",
+      "tp.vinuxhome.com",
+      "cnzz.mmstat.com",
+      "www.baihuillq.com",
+      "s23.cnzz.com",
+      "z3.cnzz.com",
+      "c.cnzz.com",
+      "stj.v1vo.top",
+      "z12.cnzz.com",
+      "img.mosflower.cn",
+      "tips.gamevvip.com",
+      "ehwe.yhdtns.com",
+      "xdn.cqqc3.com",
+      "www.jixunkyy.cn",
+      "sp.chemacid.cn",
+      "hm.baidu.com",
+      "s9.cnzz.com",
+      "z6.cnzz.com",
+      "um.cavuc.com",
+      "mav.mavuz.com",
+      "wofwk.aoidf3.com",
+      "z5.cnzz.com",
+      "xc.hubeijieshikj.cn",
+      "tj.tianwenhu.com",
+      "xg.gars57.cn",
+      "k.jinxiuzhilv.com",
+      "cdn.bootcss.com",
+      "ppl.xunzhuo123.com",
+      "xomk.jiangjunmh.top",
+      "img.xunzhuo123.com",
+      "z1.cnzz.com",
+      "s13.cnzz.com",
+      "xg.huataisangao.cn",
+      "z7.cnzz.com",
+      "xg.huataisangao.cn",
+      "z2.cnzz.com",
+      "s96.cnzz.com",
+      "q11.cnzz.com",
+      "thy.dacedsfa.cn",
+      "xg.whsbpw.cn",
+      "s19.cnzz.com",
+      "z8.cnzz.com",
+      "s4.cnzz.com",
+      "f5w.as12df.top",
+      "ae01.alicdn.com",
+      "www.92424.cn",
+      "k.wudejia.com",
+      "vivovip.mmszxc.top",
+      "qiu.xixiqiu.com",
+      "cdnjs.hnfenxun.com",
+      "cms.qdwght.com"
+     ]
+    }
+    yingshi = dict(SKELETON)
+    yingshi["sites"] = []
     for s in results:
         yingshi["sites"].append({
             "key": make_key(s["name"]),
@@ -137,15 +482,15 @@ def main():
             "type": 1,
             "api": s["url"],
             "searchable": 1,
-            "quickSearch": 1,
-            "filterable": 1
+            "quickSearch": 1
         })
     with open("yingshicang_sites.json", "w", encoding="utf-8") as f:
-        json.dump(yingshi, f, ensure_ascii=False, indent=2)
-    print("已生成 yingshicang_sites.json")
+        json.dump(yingshi, f, ensure_ascii=False, indent=1)
+    print("已生成 yingshicang_sites.json（含完整骨架）")
 
-    # 3. 生成通用格式
-    general = {"sites": []}
+    # 3. 生成通用格式（同样带完整骨架）
+    general = dict(SKELETON)
+    general["sites"] = []
     for s in results:
         general["sites"].append({
             "key": make_key(s["name"]),
@@ -153,15 +498,14 @@ def main():
             "type": 1,
             "api": s["url"],
             "searchable": 1,
-            "quickSearch": 1,
-            "filterable": 1,
-            "changeable": 1
+            "quickSearch": 1
         })
     with open("general_sites.json", "w", encoding="utf-8") as f:
-        json.dump(general, f, ensure_ascii=False, indent=2)
-    print("已生成 general_sites.json")
+        json.dump(general, f, ensure_ascii=False, indent=1)
+    print("已生成 general_sites.json（含完整骨架）")
 
     print(f"\n完成！可用源: {len(results)}，XML源: {len(xml_ok)}")
 
 if __name__ == "__main__":
     main()
+#（注：内容由AI生成）
