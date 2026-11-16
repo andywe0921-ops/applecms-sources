@@ -89,10 +89,24 @@
       "status": "ok"
     },
     {
+      "name": "虎牙资源",
+      "url": "https://www.huyaapi.com/api.php/provide/vod/",
+      "from": null,
+      "total_approx": 117370,
+      "status": "ok"
+    },
+    {
       "name": "极速资源",
       "url": "https://jszyapi.com/api.php/provide/vod/",
       "from": "jsm3u8",
       "total_approx": 116781,
+      "status": "ok"
+    },
+    {
+      "name": "优质资源",
+      "url": "https://api.yzzy-api.com/inc/apijson.php",
+      "from": null,
+      "total_approx": 109392,
       "status": "ok"
     },
     {
@@ -107,6 +121,13 @@
       "url": "https://caiji.moduapi.cc/api.php/provide/vod/",
       "from": null,
       "total_approx": 91837,
+      "status": "ok"
+    },
+    {
+      "name": "如意资源",
+      "url": "https://cj.rycjapi.com/api.php/provide/vod/",
+      "from": null,
+      "total_approx": 90145,
       "status": "ok"
     },
     {
@@ -128,6 +149,20 @@
       "url": "https://tyyszyapi.com/api.php/provide/vod/",
       "from": "tym3u8",
       "total_approx": 74742,
+      "status": "ok"
+    },
+    {
+      "name": "爱奇艺资源",
+      "url": "https://iqiyizyapi.com/api.php/provide/vod/",
+      "from": null,
+      "total_approx": 70869,
+      "status": "ok"
+    },
+    {
+      "name": "U酷资源",
+      "url": "https://api.ukuapi.com/api.php/provide/vod/",
+      "from": null,
+      "total_approx": 60684,
       "status": "ok"
     },
     {
