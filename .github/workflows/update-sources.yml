@@ -29,7 +29,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add applecms_sources.json
+          git add applecms_sources.json yingshicang_sites.json general_sites.json
           if git diff --staged --quiet; then
             echo "没有变化，跳过提交"
           else
