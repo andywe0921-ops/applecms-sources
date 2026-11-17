@@ -487,26 +487,10 @@
    "quickSearch": 1
   },
   {
-   "key": "zy360",
-   "name": "360资源",
-   "type": 1,
-   "api": "https://360zy.com/api.php/provide/vod/",
-   "searchable": 1,
-   "quickSearch": 1
-  },
-  {
    "key": "tianya",
    "name": "天涯资源",
    "type": 1,
    "api": "https://tyyszyapi.com/api.php/provide/vod/",
-   "searchable": 1,
-   "quickSearch": 1
-  },
-  {
-   "key": "iqiyi",
-   "name": "爱奇艺资源",
-   "type": 1,
-   "api": "https://iqiyizyapi.com/api.php/provide/vod/",
    "searchable": 1,
    "quickSearch": 1
   },
