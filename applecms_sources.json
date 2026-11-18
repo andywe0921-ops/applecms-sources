@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-17T23:50:27+08:00",
+  "updated_at": "2026-11-18T08:51:25+08:00",
   "description": "苹果CMS V10 可用采集接口列表（实测可用）。资源站经常变更，建议定期重测。仅供学习研究。",
   "format": "MacCMS V10 JSON (api.php/provide/vod)",
   "usage": {
@@ -15,7 +15,7 @@
       "name": "巨量资源",
       "url": "https://api.juliang.live/api/provide/vod",
       "from": "jlm3u8",
-      "total_approx": 353434,
+      "total_approx": 353461,
       "status": "ok"
     },
     {
@@ -36,21 +36,21 @@
       "name": "索尼资源",
       "url": "https://suoniapi.com/api.php/provide/vod/",
       "from": "snm3u8",
-      "total_approx": 149225,
+      "total_approx": 149241,
       "status": "ok"
     },
     {
       "name": "闪电资源",
       "url": "http://sdzyapi.com/api.php/provide/vod/",
       "from": "sdm3u8",
-      "total_approx": 125776,
+      "total_approx": 125791,
       "status": "ok"
     },
     {
       "name": "无尽资源",
       "url": "https://api.wujinapi.com/api.php/provide/vod/",
       "from": "wjm3u8",
-      "total_approx": 125292,
+      "total_approx": 125312,
       "status": "ok"
     },
     {
@@ -106,7 +106,7 @@
       "name": "优质资源",
       "url": "https://api.yzzy-api.com/inc/apijson.php",
       "from": null,
-      "total_approx": 109531,
+      "total_approx": 109597,
       "status": "ok"
     },
     {
@@ -141,21 +141,21 @@
       "name": "天涯资源",
       "url": "https://tyyszyapi.com/api.php/provide/vod/",
       "from": "tym3u8",
-      "total_approx": 75442,
+      "total_approx": 75636,
       "status": "ok"
     },
     {
       "name": "U酷资源",
       "url": "https://api.ukuapi.com/api.php/provide/vod/",
       "from": null,
-      "total_approx": 60755,
+      "total_approx": 60757,
       "status": "ok"
     },
     {
       "name": "百度资源",
       "url": "https://api.apibdzy.com/api.php/provide/vod/",
       "from": "dbm3u8",
-      "total_approx": 49747,
+      "total_approx": 49748,
       "status": "ok"
     }
   ],
@@ -167,12 +167,9 @@
       "status": "ok"
     }
   ],
-  "failed_at_test": [
-    "360资源 | https://360zy.com/api.php/provide/vod/ | <urlopen error timed out>",
-    "爱奇艺资源 | https://iqiyizyapi.com/api.php/provide/vod/ | <urlopen error timed out>"
-  ],
+  "failed_at_test": [],
   "notes": [
-    "测试时间: 2026-11-17T23:50:27+08:00",
+    "测试时间: 2026-11-18T08:51:25+08:00",
     "total_approx 为接口返回的大致资源总量，仅供参考",
     "建议在苹果CMS后台「采集 → 自定义接口」中添加，接口类型选 json（XML源选 xml）",
     "部分站支持 /from/线路名/ 优化，例如量子: .../vod/from/lzm3u8/",
